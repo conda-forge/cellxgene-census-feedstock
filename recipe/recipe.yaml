@@ -10,8 +10,6 @@ package:
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/cellxgene_census-${{ version }}.tar.gz
   sha256: 934f55dbc1124d8929e440362af204c6a09668587b26dbfeefe17d8dce0b6e9d
-  patches:
-    - fix-deps.patch
 
 build:
   number: 0
@@ -29,7 +27,7 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - tiledbsoma-py >=1.12.3,!=1.14.1
+    - tiledbsoma-py >=1.15.3
     - anndata
     - numpy >=1.23
     - requests
