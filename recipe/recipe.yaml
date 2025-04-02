@@ -1,7 +1,7 @@
 context:
   name: cellxgene-census
-  version: 1.16.2
-  python_min: 3.10
+  version: "1.17.0"
+  python_min: '3.10'
 
 package:
   name: ${{ name|lower }}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/cellxgene_census-${{ version }}.tar.gz
-  sha256: c007031b1e42b320a191ff1f20ea4099ea935fe5416dffcd710b0e4a94c28ce1
+  sha256: 934f55dbc1124d8929e440362af204c6a09668587b26dbfeefe17d8dce0b6e9d
   patches:
     - fix-deps.patch
 
