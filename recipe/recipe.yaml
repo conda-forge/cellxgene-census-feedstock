@@ -54,7 +54,7 @@ tests:
     script: |
       # NOTE: we only run a subset of the full test suite to make the build faster
       # while still ensuring that the package is working correctly.
-      pytest -vvv tests/test_util.py
+      pytest -vvv tests/test_open.py tests/test_util.py
 
       # Print the version for debugging purposes
       python -c "import cellxgene_census; print(cellxgene_census.__version__)"
