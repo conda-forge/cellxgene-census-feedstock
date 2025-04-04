@@ -47,7 +47,9 @@ tests:
         - requests-mock
         - datasets
         - proxy-py
-        - tiledbsoma-py 1.15.*
+        - tiledb 2.27.0
+        - tiledb-py 0.33.2
+        - tiledbsoma-py 1.15.3
     files:
       source:
         - tests/
