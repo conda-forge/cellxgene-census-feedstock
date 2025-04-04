@@ -10,6 +10,8 @@ package:
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/cellxgene_census-${{ version }}.tar.gz
   sha256: 934f55dbc1124d8929e440362af204c6a09668587b26dbfeefe17d8dce0b6e9d
+  patches:
+    - fix-test-open.patch
 
 build:
   number: 0
@@ -47,9 +49,6 @@ tests:
         - requests-mock
         - datasets
         - proxy-py
-        - tiledb 2.27.0
-        - tiledb-py 0.33.2
-        - tiledbsoma-py 1.15.3
     files:
       source:
         - tests/
